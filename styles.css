@@ -1,0 +1,139 @@
+:root{
+    --bg-main: #e0e8ff;
+    --bg-plan: hsl(225, 100%, 98%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-hover: #766cf1;
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, main{
+    width: 100%;
+    height: 100%;
+}
+
+
+main{
+    background-color: var(--bg-main);
+    background-image: url('./images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    max-width: 425px;
+    color: var(--desaturated-blue);
+}
+
+.card--image{
+    height: 30%;
+    width: auto;
+}
+
+.card--description{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    background-color: white;
+    
+}
+
+.card--description--title{
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+
+.card--description--text{
+    padding: 0 1rem;
+}
+
+.card--description--plan{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-plan);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card--description--plan--info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card--description--plan--info--name{
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.card--description--plan--change{
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+
+.card--description--accept{
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+}
+
+.card--description--cancel{
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+/* Estados activos */
+
+
+.card--description--plan--change:hover{
+    text-decoration: none;
+    color: var(--bright-blue-hover);
+}
+
+.card--description--accept:hover{
+    background-color: var(--bright-blue-hover);
+}
+
+.card--description--cancel:hover{
+    color: var(--dark-blue);
+}
+
+@media(min-width:400px){
+    main{
+        background-image: url('./images/pattern-background-desktop.svg');
+    }
+}
