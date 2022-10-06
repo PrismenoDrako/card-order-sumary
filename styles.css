@@ -19,7 +19,7 @@ html, body, main{
 }
 
 html{
-    font-size: 13px;
+    font-size: 16px;
 }
 
 
@@ -27,7 +27,7 @@ main{
     background-color: var(--bg-main);
     background-image: url('./images/pattern-background-mobile.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,8 +44,9 @@ main{
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     color: var(--desaturated-blue);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .card--image{
@@ -57,14 +58,14 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem;
     text-align: center;
     background-color: white;
     
 }
 
 .card--description--title{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 900;
     color: var(--dark-blue);
 }
