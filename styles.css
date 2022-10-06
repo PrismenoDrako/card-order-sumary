@@ -18,13 +18,16 @@ html, body, main{
     height: 100%;
 }
 
+html{
+    font-size: 13px;
+}
+
 
 main{
     background-color: var(--bg-main);
     background-image: url('./images/pattern-background-mobile.svg');
     background-repeat: no-repeat;
     background-size: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,11 +40,11 @@ main{
     flex-direction: column;
     border-radius: 1rem;
     overflow: hidden;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
     width: 100%;
-    max-width: 425px;
+    max-width: 350px;
     color: var(--desaturated-blue);
 }
 
@@ -54,7 +57,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 3rem 2.5rem;
+    padding: 2.5rem 2rem;
     text-align: center;
     background-color: white;
     
@@ -66,10 +69,11 @@ main{
     color: var(--dark-blue);
 }
 
-
 .card--description--text{
-    padding: 0 1rem;
+    padding: 0 0.6rem;
+    line-height: 1.5rem
 }
+
 
 .card--description--plan{
     width: 100%;
@@ -77,7 +81,7 @@ main{
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-plan);
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1rem;
     overflow: hidden;
 }
@@ -88,14 +92,21 @@ main{
     align-items: center;
 }
 
+.card--description--plan--icon{
+    width: 3rem;
+    height: auto;
+}
+
 .card--description--plan--info--name{
     color: var(--dark-blue);
     font-weight: 900;
+    margin-bottom: 0.5rem;
 }
 
 .card--description--plan--change{
     color: var(--bright-blue);
     font-weight: 700;
+
 }
 
 
@@ -113,7 +124,7 @@ main{
 .card--description--cancel{
     color: var(--desaturated-blue);
     text-decoration: none;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 /* Estados activos */
@@ -135,5 +146,9 @@ main{
 @media(min-width:400px){
     main{
         background-image: url('./images/pattern-background-desktop.svg');
+    }
+
+    .card--description{
+        padding: 2.5rem 2.5rem;
     }
 }
